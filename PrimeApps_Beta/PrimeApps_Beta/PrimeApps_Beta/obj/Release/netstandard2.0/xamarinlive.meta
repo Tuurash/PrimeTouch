@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XamlProjectMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Files>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\App.xaml</FilePath>
+      <Hash>BD-EC-03-7B-EA-10-36-6C-C6-3F-98-D7-F7-D1-E2-65</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Themes\LightTheme.xaml</FilePath>
+      <Hash>39-35-CD-2A-EF-77-0E-81-35-6E-C6-96-B5-CA-BC-B6</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\AboutPage.xaml</FilePath>
+      <Hash>D4-1F-31-AE-EB-9B-05-BA-F2-31-18-5A-B5-92-85-52</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\ApprovalDashboard.xaml</FilePath>
+      <Hash>08-08-50-97-1B-B8-69-A5-14-B5-08-66-5D-23-F9-2A</Hash>
+      <Properties>
+        <string>BackgroundColor</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\BlankPage.xaml</FilePath>
+      <Hash>A9-EE-DC-38-BA-39-E3-E9-50-00-73-65-C3-DF-FA-3A</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\InquiryDetail.xaml</FilePath>
+      <Hash>17-01-42-5E-02-8F-69-D9-1C-B8-95-69-2B-ED-4A-29</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\LoginPage2.xaml</FilePath>
+      <Hash>0D-45-B5-68-10-0C-27-46-84-69-01-CB-29-29-87-7D</Hash>
+      <Properties>
+        <string>NavigationPage.HasNavigationBar</string>
+        <string>NavigationPage.HasBackButton</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\PrimeApps.xaml</FilePath>
+      <Hash>8F-7C-52-DC-D7-4B-40-4C-DB-99-F6-09-E3-15-28-40</Hash>
+      <Properties>
+        <string>NavigationPage.HasNavigationBar</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\PrimeAppsDetail.xaml</FilePath>
+      <Hash>00-54-4D-80-8A-C3-DA-FD-72-22-43-8B-2F-D6-79-EC</Hash>
+      <Properties>
+        <string>BarTextColor</string>
+        <string>Title</string>
+        <string>SelectedTabColor</string>
+        <string>BarBackgroundColor</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\PrimeAppsMaster.xaml</FilePath>
+      <Hash>66-E6-9C-DF-28-D7-E1-01-A0-DA-8C-73-95-C9-5C-C1</Hash>
+      <Properties>
+        <string>Title</string>
+        <string>NavigationPage.HasNavigationBar</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\Tabbed.xaml</FilePath>
+      <Hash>46-72-35-7E-B4-ED-06-C8-98-40-56-9D-18-30-DE-EE</Hash>
+      <Properties>
+        <string>BarTextColor</string>
+        <string>Title</string>
+        <string>SelectedTabColor</string>
+        <string>BarBackgroundColor</string>
+      </Properties>
+    </XamlFileMeta>
+  </Files>
+</XamlProjectMeta>

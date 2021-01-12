@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="PrimeApps_Beta.Views.PrimeAppsMaster"
+             Title="Master"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <ListView x:Name="MenuItemsListView"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="true"
+                  ItemsSource="{Binding MenuItems}"
+                  FlexLayout.AlignSelf="Center">
+
+            <ListView.Header>
+
+                <!--SideMenu Header Design-->
+
+                <Grid BackgroundColor="#9e2a2b">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="122" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid>
+
+                        <StackLayout Padding="0,20,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <StackLayout Orientation="Horizontal">
+                                <controls:CircleImage BorderColor="White" BorderThickness="2" Source="logo.png" Aspect="AspectFill" WidthRequest="85" HeightRequest="85" />
+                                <StackLayout Orientation="Vertical" Padding="15,5,0,0">
+                                    <Label Text="PrimeApps" TextColor="White" FontSize="20"  />
+                                    <Label x:Name="lblUserName" Text="" TextColor="White" FontSize="25" />
+                                    <Label x:Name="lblDate" Text="" TextColor="White" FontSize="10" />
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </Grid>
+                </Grid>
+
+                <!--Dinamic Menu backend Callback-->
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="60,18,2,10" HorizontalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal">
+
+                                <Image Source="{Binding ImageSrc}" HeightRequest="20" WidthRequest="20"  />
+                                <Label VerticalOptions="FillAndExpand" 
+                                       VerticalTextAlignment="Center" 
+                                       Text="{Binding Title}" 
+                                       FontSize="20"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <!--Sidemenu Footer-->
+            <ListView.Footer>
+                <StackLayout Orientation="Horizontal" Margin="0,385,7,0" VerticalOptions="End" HorizontalOptions="End">
+                    <Image Source="tomato.png" BackgroundColor="Transparent"
+                       HeightRequest="17"
+                       WidthRequest="17"/>
+                    <Label Text="Version: pre-alpha 0.1.1" 
+                           FontSize="14"/>
+
+                </StackLayout>
+
+            </ListView.Footer>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="PrimeApps_Beta.Views.HomePage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Image Source="PrimeBanner.png"  HeightRequest="86" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                <ContentView Padding="20,40,0,40" Background="PrimeBanner.png" VerticalOptions="FillAndExpand">
+                    <controls:CircleImage BorderColor="#9e2a2b" BorderThickness="3" 
+                                              Source="profilePic.png" Aspect="AspectFill"
+                                              WidthRequest="100" HeightRequest="100" />
+                </ContentView>
+
+            </StackLayout>
+
+            
+            <ScrollView Grid.Row="1">
+                <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                    <Label Text="Still In Development" FontSize="Title"/>
+                    <Label Text="More features are yet to Come" FontSize="16" Padding="0,0,0,0"/>
+                    <Label FontSize="16" Padding="0,24,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="meanwhile visit me :) "/>
+                                    <!--<Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>-->
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button Margin="0,10,0,0" Text="Sure?"
+                        Clicked="Button_Clicked"
+                        BackgroundColor="#9e2a2b"
+                        TextColor="White" />
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
