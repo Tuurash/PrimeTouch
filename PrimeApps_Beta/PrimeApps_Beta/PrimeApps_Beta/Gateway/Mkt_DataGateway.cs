@@ -15,6 +15,20 @@ namespace PrimeApps_Beta.Gateway
             return ExecuteQueryDT(query);
         }
 
+        internal void UpdateAltDoreqStatus(string companyName, string requestNo, string lcNo, string altReqStatus)
+        {
+            string query = "Update PR_AltDORequest Set ReqStatus='" + altReqStatus + "' Where CompanyName='" + companyName + "'   And AltReqNo='" + requestNo + "' And LCNo='" + lcNo + "'";
+            ExecuteNonQuery(query);
+        }
+
+        internal DataTable GetUnApprovedAdvAlternateReq(string getCompanyName, string getDOreqNo, string advno)
+        {
+            string query = @"select ShortName,t1.* from (Select T.*,FullName, Address From ( 
+                             Select CompanyName, AltReqNo, ReqDate, LCNo, InvoiceNo, Quantity, ItemRate, Count, CountCode, Discount, Commission, BuyerName, BuyerCode,'ALTERNATE REQUEST' as DOCs,Ref From 
+                             PR_AltDORequest Where CompanyName = '" + getCompanyName + "'   And AltReqNo = '" + getDOreqNo + "' And DoType<>'COMPENSATION DO' UNION Select CompanyName,NULL,NULL,AdvNO,NULL,Quantity,Rate,YarnCount,YarnCode,Discount,Commission,BuyerName,BuyerCode,'ADVANCE REQUESTED' as DOCs, Ref From PR_AdvanceDelivery Where AdvNO = '" + advno + "'  ) as T left outer join(Select ShortName, FullName, Address From PR_CompanyInformation) PR_CompanyInformation ON   T.CompanyName = PR_CompanyInformation.ShortName)as t1 left outer join(select ShortName, ProductCode from PR_ProductInfo) PR_ProductInfo on t1.CountCode = PR_ProductInfo.ProductCode";
+            return ExecuteQueryDT(query);
+        }
+
         internal DataTable GetAltDelRequestToApprove(string getUserName)
         {
             string query = "Select T.*,Quantity,Amount,AltReqNo,Ref,BuyerName,LCNo,InvoiceNo,DoType from (Select* From LC_MarketingApprovalLog Where DocumentName = 'ALT_DEL_REQ' And RequestTo = '" + getUserName + "' And ApprovedBy IS NULL) as T left outer join(Select CompanyName, AltReqNo, BuyerName, LCNo, InvoiceNo, Ref, DoType, SUM(Quantity) as Quantity, Sum(Quantity * ItemRate) as Amount from PR_AltDORequest Group By CompanyName, AltReqNo, BuyerName, LCNo, InvoiceNo, Ref, DoType) PR_AltDORequest ON T.CompanyName = PR_AltDORequest.CompanyName And T.DocumentNo = PR_AltDORequest.AltReqNo ";

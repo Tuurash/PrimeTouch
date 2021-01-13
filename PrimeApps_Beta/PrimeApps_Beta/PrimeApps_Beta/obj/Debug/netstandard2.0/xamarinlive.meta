@@ -36,6 +36,18 @@
       <Properties />
     </XamlFileMeta>
     <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\Alt_DODetailsPopup.xaml</FilePath>
+      <Hash>49-2E-31-22-0B-2B-A2-33-10-7D-BA-ED-C6-86-0A-C8</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\Alt_DO_ApprovalDashboard.xaml</FilePath>
+      <Hash>E5-3C-4B-6F-8F-17-E6-6A-29-92-78-F6-B9-B2-39-A3</Hash>
+      <Properties>
+        <string>BackgroundColor</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
       <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\ApprovalDashboard.xaml</FilePath>
       <Hash>A4-B9-77-95-46-AD-ED-66-6B-39-14-66-FF-13-CF-60</Hash>
       <Properties>
