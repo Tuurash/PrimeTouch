@@ -21,13 +21,13 @@
 
             <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
-                    <Image Source="PrimeBanner.png"  HeightRequest="86" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Image Source="steelmills.jpg"  HeightRequest="130" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </StackLayout>
 
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
-                <ContentView Padding="20,40,0,10" Background="PrimeBanner.png" VerticalOptions="FillAndExpand">
+                <ContentView Padding="20,80,0,10" Background="PrimeBanner.png" VerticalOptions="FillAndExpand">
                     <controls:CircleImage BorderColor="#9e2a2b" BorderThickness="3" 
                                               Source="profilePic.png" Aspect="AspectFill"
                                               WidthRequest="100" HeightRequest="100" />
@@ -37,12 +37,54 @@
 
 
             <ScrollView Grid.Row="1">
-                
+
                 <StackLayout Orientation="Vertical" Padding="30,0,30,24" Spacing="10">
                     <Label x:Name="lblEmployeeName" FontSize="Title"/>
                     <Label x:Name="lblDesignation" FontSize="16" Padding="0,0,0,0"/>
+
+                    <BoxView HeightRequest="3" Margin="0,0,0,38"
+                             VerticalOptions="Center"
+                             Opacity="0.5"
+                             Color="#747d8c" />
+
+                    <Label Text="Quick Reports" FontSize="20" VerticalOptions="Center" Padding="0,0,0,10"
+                           Margin="100,0,0,0" FontAttributes="Bold"/>
+
+                    <StackLayout Orientation="Horizontal" Padding="5,0,5,0" WidthRequest="50" HeightRequest="75" >
+                        <Button x:Name="Report" BorderColor="#9e2a2b" BorderWidth="0.7" BackgroundColor="#ffffff" ImageSource="ReportIcon.png" ContentLayout="Top,0"
+                                Text="Reports" TextColor="#9e2a2b"></Button>
+                        <Button x:Name="Report2" BorderColor="#9e2a2b" BorderWidth="0.7" BackgroundColor="#ffffff" ImageSource="ReportIcon.png" ContentLayout="Top,0"
+                                Text="Reports" TextColor="#9e2a2b"></Button>
+                        <Button x:Name="Report3" BorderColor="#9e2a2b" BorderWidth="0.7" BackgroundColor="#ffffff" ImageSource="ReportIcon.png" ContentLayout="Top,0"
+                                Text="Reports" TextColor="#9e2a2b"></Button>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Padding="5,0,5,0"  WidthRequest="50" HeightRequest="75" >
+                        <Button x:Name="Report4" BorderColor="#9e2a2b" BorderWidth="0.7" BackgroundColor="#ffffff" ImageSource="ReportIcon.png" ContentLayout="Top,0"
+                                Text="Reports" TextColor="#9e2a2b"></Button>
+                        <Button x:Name="Report5" BorderColor="#9e2a2b" BorderWidth="0.7" BackgroundColor="#ffffff" ImageSource="ReportIcon.png" ContentLayout="Top,0"
+                                Text="Reports" TextColor="#9e2a2b"></Button>
+                        <Button x:Name="Report6" BorderColor="#9e2a2b" BorderWidth="0.7" BackgroundColor="#ffffff" ImageSource="ReportIcon.png" ContentLayout="Top,0"
+                                Text="Reports" TextColor="#9e2a2b"></Button>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Padding="5,0,5,0"  WidthRequest="50" HeightRequest="75" >
+                        <Button x:Name="Report7" BorderColor="#9e2a2b" BorderWidth="0.7" BackgroundColor="#ffffff" ImageSource="ReportIcon.png" ContentLayout="Top,0"
+                                Text="Reports" TextColor="#9e2a2b" HorizontalOptions="Center"></Button>
+
+
+                    </StackLayout>
                 </StackLayout>
+
+
             </ScrollView>
+
+
+
+
+
         </Grid>
+
     </ContentPage.Content>
 </ContentPage>

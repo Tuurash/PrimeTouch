@@ -54,7 +54,7 @@ namespace PrimeApps_Beta.Views
                 TotalAmount = decimal.Parse(dt.Compute("Sum(Amount)", "").ToString());
 
                 lblTotalAmount.Text = "Total qty:   " + TotalQnty.ToString("0.00") + "   Amount: " + TotalAmount.ToString("0.00");
-                lblAlt_DOReqNo.Text = dt.Rows[0]["AdvNO"].ToString();
+                lblAlt_DOReqNo.Text = DocNo;
             }
             foreach (var item in Alt_doDetailList)
             {

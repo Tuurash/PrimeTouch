@@ -2769,3 +2769,5 @@ D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.Android\obj\Debug\
 D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.Android\obj\Debug\90\res\drawable\home.png
 D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.Android\obj\Debug\90\res\drawable\profilepic.png
+D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.Android\obj\Debug\90\res\drawable\reporticon.png
+D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.Android\obj\Debug\90\res\drawable\steelmills.jpg

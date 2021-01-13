@@ -4789,10 +4789,12 @@ public final class R {
     public static final int primeicon=0x7f0700b2;
     public static final int profile=0x7f0700b3;
     public static final int profilepic=0x7f0700b4;
-    public static final int survey=0x7f0700b5;
-    public static final int tomato=0x7f0700b6;
-    public static final int tooltip_frame_dark=0x7f0700b7;
-    public static final int tooltip_frame_light=0x7f0700b8;
+    public static final int reporticon=0x7f0700b5;
+    public static final int steelmills=0x7f0700b6;
+    public static final int survey=0x7f0700b7;
+    public static final int tomato=0x7f0700b8;
+    public static final int tooltip_frame_dark=0x7f0700b9;
+    public static final int tooltip_frame_light=0x7f0700ba;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

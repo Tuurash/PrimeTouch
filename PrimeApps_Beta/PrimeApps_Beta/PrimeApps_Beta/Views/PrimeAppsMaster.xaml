@@ -26,6 +26,7 @@
                     <Grid>
 
                         <StackLayout Padding="0,20,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
                             <StackLayout Orientation="Horizontal">
                                 <controls:CircleImage BorderColor="White" BorderThickness="2" Source="logo.png" Aspect="AspectFill" WidthRequest="85" HeightRequest="85" />
                                 <StackLayout Orientation="Vertical" Padding="15,5,0,0">

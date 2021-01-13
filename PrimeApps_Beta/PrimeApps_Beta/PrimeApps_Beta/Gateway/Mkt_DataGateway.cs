@@ -41,7 +41,7 @@ namespace PrimeApps_Beta.Gateway
 
         internal DataTable GetUnApprovedAdvAlternateReq(string getCompanyName, string getDOreqNo, string advno)
         {
-            string query = @"select ShortName,t1.* from (Select T.*,FullName, Address From ( 
+            string query = @"select ShortName,t1.*,nullif(Amount,0) as Amount from (Select T.*,FullName, Address,Quantity*ItemRate as Amount From ( 
                              Select CompanyName, AltReqNo, ReqDate, LCNo, InvoiceNo, Quantity, ItemRate, Count, CountCode, Discount, Commission, BuyerName, BuyerCode,'ALTERNATE REQUEST' as DOCs,Ref From 
                              PR_AltDORequest Where CompanyName = '" + getCompanyName + "'   And AltReqNo = '" + getDOreqNo + "' And DoType<>'COMPENSATION DO' UNION Select CompanyName,NULL,NULL,AdvNO,NULL,Quantity,Rate,YarnCount,YarnCode,Discount,Commission,BuyerName,BuyerCode,'ADVANCE REQUESTED' as DOCs, Ref From PR_AdvanceDelivery Where AdvNO = '" + advno + "'  ) as T left outer join(Select ShortName, FullName, Address From PR_CompanyInformation) PR_CompanyInformation ON   T.CompanyName = PR_CompanyInformation.ShortName)as t1 left outer join(select ShortName, ProductCode from PR_ProductInfo) PR_ProductInfo on t1.CountCode = PR_ProductInfo.ProductCode";
             return ExecuteQueryDT(query);
