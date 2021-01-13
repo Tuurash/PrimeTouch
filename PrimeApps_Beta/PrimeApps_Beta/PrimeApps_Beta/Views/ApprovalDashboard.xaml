@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+
+             x:Class="PrimeApps_Beta.Views.ApprovalDashboard"
+             xmlns:model="clr-namespace:PrimeApps_Beta.Models"  
+             BackgroundColor="#fff">
+    <!--"#bc4749"-->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+            <On Platform="Android" Value="5, 0, 5, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <!--<content Start-->
+
+
+    <ContentPage.Content>
+        <Grid>
+            <ListView x:Name="InquiryDataView" 
+                            HasUnevenRows="True"
+                            VerticalOptions="StartAndExpand"
+                            FlexLayout.AlignSelf="Center"
+                            SeparatorVisibility="Default"
+                            SeparatorColor="Transparent"
+                            SelectionMode="Single"
+                            IsPullToRefreshEnabled="True"
+                            Refreshing="InquiryDataView_Refreshing"
+                            ItemSelected="InquiryDataView_ItemSelected"
+                            >
+
+                <ListView.Header >
+                    <Label Text=""
+                           Margin="0,2,0,0"/>
+                </ListView.Header>
+
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <ViewCell.View>
+                                <StackLayout Padding="2,5,2,5">
+                                    <Frame WidthRequest="342" BackgroundColor="#fff" BorderColor="#fff" Opacity=".8"
+                                       HasShadow="True"
+                                       Padding="5"
+                                       CornerRadius="8"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       x:Name="InquiryDataView"
+                                       FlyoutItem.IsVisible="True">
+
+                                        <Grid WidthRequest="311" 
+                                          Margin="1, 22, 1, 2"
+                                          Padding="5" 
+                                          x:DataType="model:ApprovalDataModel">
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20" />
+                                                <RowDefinition Height="20" />
+                                                <RowDefinition Height="20" />
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1*" />
+                                                <ColumnDefinition Width="1*" />
+                                                <ColumnDefinition Width="1*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label Grid.Row="0" Grid.Column="0" 
+                                               x:Name="lblDocNo"
+                                               Text="{Binding DocumentNo}" 
+                                               FontAttributes="Bold" FontSize="14"
+                                               TextColor="#9e2a2b"
+                                               VerticalTextAlignment="Center"
+                                               HorizontalTextAlignment="Start" />
+                                            <!--, StringFormat='{0:MMMM dd, yyyy}'-->
+                                            <Label Grid.Row="0" Grid.Column="1" 
+                                               Text="{Binding InquiryDate}"
+                                               FontAttributes="Bold" FontSize="16"
+                                               TextColor="#9e2a2b"
+                                               VerticalTextAlignment="Center"
+                                               HorizontalTextAlignment="End" />
+
+                                            <Label Grid.Row="0" Grid.Column="2" 
+                                               Text="{Binding CompanyName, FallbackValue='R0C2'}"
+                                               FontAttributes="Bold" FontSize="16"
+                                               TextColor="#9e2a2b"
+                                               VerticalTextAlignment="Center"
+                                               HorizontalTextAlignment="End" />
+
+                                            <Label Grid.Row="1" Grid.Column="0" 
+                                               Text="{Binding BuyerName}"
+                                               Grid.ColumnSpan="2"
+                                               FontAttributes="Bold" FontSize="16"
+                                               TextColor="#9e2a2b"
+                                               VerticalTextAlignment="Start"
+                                               HorizontalTextAlignment="Start" />
+
+                                            <Label Grid.Row="1" Grid.Column="2" 
+                                               Text="{Binding SalesPerson}"                                              
+                                               FontAttributes="Bold" FontSize="16"
+                                               TextColor="#9e2a2b"
+                                               VerticalTextAlignment="Start"
+                                               HorizontalTextAlignment="End" />
+
+
+                                            <!--<Button x:Name="btnApprove" 
+                                        Grid.Row="3" Grid.Column="2" 
+                                        BorderRadius="7" 
+                                        HeightRequest="40"
+                                        HorizontalOptions="Center" 
+                                        BackgroundColor="#a7c957"
+                                        TextColor="White"  Text="Approve" FontSize="12"
+                                        Clicked="btnApprove_Clicked"/>
+                                        <Button x:Name="btnDetail" 
+                                        Grid.Row="3" Grid.Column="1" 
+                                        BorderRadius="7" 
+                                        BindingContext="{Binding CompanyInq}"
+                                        HeightRequest="40"
+                                        HorizontalOptions="Center" 
+                                        BackgroundColor="#9ad1d4" 
+                                        TextColor="White"  Text="Detail" FontSize="12"
+                                       
+                                        Clicked="btnDetail_Clicked"/>
+                                        <Button x:Name="btnReject" 
+                                        Grid.Row="3" Grid.Column="0" 
+                                        BorderRadius="7" 
+                                        HeightRequest="40"
+                                        HorizontalOptions="Center" 
+                                        BackgroundColor="#de6560" 
+                                        TextColor="White"  Text="Reject" FontSize="12"
+                                        Clicked="btnReject_Clicked"/>-->
+
+                                        </Grid>
+
+                                    </Frame>
+                                </StackLayout>
+                            </ViewCell.View>
+
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <!--<Button 
+                     x:Name="btnLogout" BackgroundColor="Red" 
+                     HeightRequest="50" 
+                     WidthRequest="50"
+                     CornerRadius="30"
+                     Margin="20,20"
+                     ImageSource="logout.png"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"
+                     />-->
+
+        </Grid>
+
+        <!--</RefreshView>-->
+
+
+
+    </ContentPage.Content>
+</ContentPage>
