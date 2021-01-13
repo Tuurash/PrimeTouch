@@ -21,12 +21,8 @@ namespace PrimeApps_Beta.Views
     {
         string CompanyName = ""; string DocNo = "";
         string LCNo = ""; string DOType = "";
-        string getCurrentApprovalLevel = ""; string getNextApprovalLevel = "";
-        string getUserName = ""; string getSellingType = "";
 
-        int insertRslt = 0;
-        string buyercode = "";
-        string refer = "";
+        string getUserName = "";
 
         public ObservableCollection<DODataModel> items = new ObservableCollection<DODataModel>();
         DO_Manager DODM = new DO_Manager();
@@ -43,7 +39,7 @@ namespace PrimeApps_Beta.Views
             getUserName = getuserName;
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             decimal TotalQnty, TotalAmount = 0;
             base.OnAppearing();
@@ -56,7 +52,7 @@ namespace PrimeApps_Beta.Views
                 TotalQnty = decimal.Parse(dt.Compute("Sum(DoQnty)", "").ToString());
                 TotalAmount = decimal.Parse(dt.Compute("Sum(DOAmount)", "").ToString());
 
-                lblTotalAmount.Text = "PIQuantity:   " + TotalQnty.ToString("0.00") + "   PI Value: " + TotalAmount.ToString("0.00");
+                lblTotalAmount.Text = "Total qty:   " + TotalQnty.ToString("0.00") + "  Total Amount: " + TotalAmount.ToString("0.00");
                 lblDONo.Text = dt.Rows[0]["DONo"].ToString();
             }
             foreach (var item in doDetailList)

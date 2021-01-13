@@ -15,6 +15,31 @@ namespace PrimeApps_Beta.Gateway
             return ExecuteQueryDT(query);
         }
 
+        internal DataTable GetAltDelRequestToApprove(string getUserName)
+        {
+            string query = "Select T.*,Quantity,Amount,AltReqNo,Ref,BuyerName,LCNo,InvoiceNo,DoType from (Select* From LC_MarketingApprovalLog Where DocumentName = 'ALT_DEL_REQ' And RequestTo = '" + getUserName + "' And ApprovedBy IS NULL) as T left outer join(Select CompanyName, AltReqNo, BuyerName, LCNo, InvoiceNo, Ref, DoType, SUM(Quantity) as Quantity, Sum(Quantity * ItemRate) as Amount from PR_AltDORequest Group By CompanyName, AltReqNo, BuyerName, LCNo, InvoiceNo, Ref, DoType) PR_AltDORequest ON T.CompanyName = PR_AltDORequest.CompanyName And T.DocumentNo = PR_AltDORequest.AltReqNo ";
+            return ExecuteQueryDT(query);
+        }
+
+        internal int UpdateAdvanceStatus(string companyName, string docNo, string advStatus)
+        {
+            string query = "Update PR_AdvanceDelivery Set Status='" + advStatus + "' Where CompanyName='" + companyName + "' And AdvNo='" + docNo + "'";
+            return ExecuteNonQuery(query);
+        }
+
+        internal DataTable GetADO_ReqDetails(string CompanyName, string docNo)
+        {
+            string query = @"select t.*,ShortName, Nullif(TotalAmount,0) as TotalAmount from (Select AdvNO,AdvDate,BuyerCode,BuyerName,YarnCode,Rate,Quantity,Rate* Quantity as TotalAmount,Discount,Value,Ref,CompanyName,Status,Tenor,PINo,'Requested Advance' as AdvPosition From PR_AdvanceDelivery 
+                             Where AdvNo = '" + docNo + "' )as t left outer join(select ShortName,ProductCode from PR_ProductInfo) PR_ProductInfo on t.YarnCode=PR_ProductInfo.ProductCode";
+            return ExecuteQueryDT(query);
+        }
+
+        internal DataTable GetAllUnApprovedAdvReqByUser(string getUserName)
+        {
+            string query = "Select T1.* From ( Select T.*,RequestTo,ApprovedBy,ReqLevel From( Select CompanyName, BuyerCode, AdvNO, PINo, AdvDate, BuyerName, SUM(Value) as Amount From PR_AdvanceDelivery Where Status = 'UnApproved' Group By CompanyName,BuyerCode,AdvNO,PINo,AdvDate,BuyerName 		) as T                 Left outer Join(Select CompanyName, DocumentNo, RequestTo, ApprovedBy, ReqLevel from LC_MarketingApprovalLog Where DocumentName = 'ADV_DEL_REQ') LC_MarketingApprovalLog ON T.CompanyName = LC_MarketingApprovalLog.CompanyName And T.AdvNO = LC_MarketingApprovalLog.DocumentNo) as T1 Where  RequestTo = '" + getUserName + "' And ApprovedBy IS NULL ";
+            return ExecuteQueryDT(query);
+        }
+
         internal int UpdateAdvanceDoStatus(string documentNo, string lcNo, string companyName, string status)
         {
             string query = "Update PR_AdvanceDODetails Set DoStatus='" + status + "' Where CompanyName='" + companyName + "' And AdvNo='" + lcNo + "' And DoNo='" + documentNo + "'";
@@ -29,7 +54,7 @@ namespace PrimeApps_Beta.Gateway
 
         internal DataTable GetDoToPrint(string getCompanyName, string getLCNo, object getDoNo)
         {
-            string query = @"select ShortName,t.*,ISNULL(0,Amount) as DOAmount from(Select *,(ItemRate*DoQnty) as Amount, DOQnty / 50 as Pkt, Right(DoNo, 4) as DocNo from PR_DeliveryInfo where Company = '" + getCompanyName + "' and LCNoNo = '" + getLCNo + "'  and DoNo = '" + getDoNo + "') as t left outer join(select ProductCode,ShortName from PR_ProductInfo) PR_ProductInfo on t.CountCode=PR_ProductInfo.ProductCode";
+            string query = @"select ShortName,t.*,Nullif(Amount,0) as DOAmount from(Select *,(ItemRate*DoQnty) as Amount, DOQnty / 50 as Pkt, Right(DoNo, 4) as DocNo from PR_DeliveryInfo where Company = '" + getCompanyName + "' and LCNoNo = '" + getLCNo + "'  and DoNo = '" + getDoNo + "') as t left outer join(select ProductCode,ShortName from PR_ProductInfo) PR_ProductInfo on t.CountCode=PR_ProductInfo.ProductCode";
             return ExecuteQueryDT(query);
         }
 

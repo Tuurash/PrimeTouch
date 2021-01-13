@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace PrimeApps_Beta.Services
+namespace PrimeApps_Beta.Manager
 {
     class InquiryApprovalManager
     {
@@ -27,31 +27,6 @@ namespace PrimeApps_Beta.Services
 
         //CommonMethod for dt conversion to list
         #region ListConversionFromDt
-        public static class CommonMethod
-        {
-            public static List<T> ConvertToList<T>(DataTable dt)
-            {
-                var columnNames = dt.Columns.Cast<DataColumn>().Select(c => c.ColumnName.ToLower()).ToList();
-                var properties = typeof(T).GetProperties();
-                return dt.AsEnumerable().Select(row =>
-                {
-                    var objT = Activator.CreateInstance<T>();
-                    foreach (var pro in properties)
-                    {
-                        if (columnNames.Contains(pro.Name.ToLower()))
-                        {
-                            try
-                            {
-                                pro.SetValue(objT, row[pro.Name]);
-                            }
-                            catch (Exception) { }
-                        }
-                    }
-                    return objT;
-                }).ToList();
-            }
-        }
-
         internal static int InsertSupersedeInquiryApprovalLog(string companyName, string documentName, string docNo, string getUserName1, DateTime reqTime, string getUserName2, string currentReqLevel, DateTime approveTime, string getUserName3, string userIP, bool digitalSign)
         {
             throw new NotImplementedException();
@@ -76,16 +51,6 @@ namespace PrimeApps_Beta.Services
         {
             new InquiryApprovalGateway().UpdateCashInquiryStatus(documentNo, companyName, inqAppStatus);
         }
-
-
-
-        //public List<ApprovalDataModel> inqDetailList(DataTable d)
-        //{
-        //    List<ApprovalDataModel> InquiryDetail = new List<ApprovalDataModel>();
-        //    DataTable dt = d;
-        //    InquiryDetail = CommonMethod.ConvertToList<ApprovalDataModel>(d);
-        //    return InquiryDetail;
-        //}
 
         #endregion
     }

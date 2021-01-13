@@ -27,7 +27,7 @@
 
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
-                <ContentView Padding="20,40,0,40" Background="PrimeBanner.png" VerticalOptions="FillAndExpand">
+                <ContentView Padding="20,40,0,10" Background="PrimeBanner.png" VerticalOptions="FillAndExpand">
                     <controls:CircleImage BorderColor="#9e2a2b" BorderThickness="3" 
                                               Source="profilePic.png" Aspect="AspectFill"
                                               WidthRequest="100" HeightRequest="100" />
@@ -37,11 +37,10 @@
 
 
             <ScrollView Grid.Row="1">
-                <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                
+                <StackLayout Orientation="Vertical" Padding="30,0,30,24" Spacing="10">
                     <Label x:Name="lblEmployeeName" FontSize="Title"/>
                     <Label x:Name="lblDesignation" FontSize="16" Padding="0,0,0,0"/>
-
-
                 </StackLayout>
             </ScrollView>
         </Grid>

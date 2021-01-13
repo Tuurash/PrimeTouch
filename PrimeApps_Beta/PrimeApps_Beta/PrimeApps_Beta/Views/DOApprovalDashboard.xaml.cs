@@ -35,7 +35,7 @@ namespace PrimeApps_Beta.Views
             });
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
             RefreshAllItem();
