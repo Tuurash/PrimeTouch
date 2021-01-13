@@ -13,7 +13,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-
         <Frame Grid.RowSpan="2" HeightRequest="700" VerticalOptions="End" CornerRadius="15" Padding="20,0" BackgroundColor="White">
             <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
@@ -99,6 +98,7 @@
                                    HeightRequest="100" WidthRequest="70" 
                                    HorizontalOptions="Center" IsVisible="true" VerticalOptions="Center"                                   
                                    Color="#d00000"/>
+
     </Grid>
 
 </pages:PopupPage>

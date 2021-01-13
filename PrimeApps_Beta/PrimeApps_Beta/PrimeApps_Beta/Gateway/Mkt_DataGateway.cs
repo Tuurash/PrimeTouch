@@ -15,6 +15,24 @@ namespace PrimeApps_Beta.Gateway
             return ExecuteQueryDT(query);
         }
 
+        internal void UpdateDeliverySchedule(string documentNo, DateTime scheduledate)
+        {
+            string query = "Update PR_DOWiseDeliverySchedule set SchStatus='Approved' Where ScheduleDate='" + scheduledate + "' And ScheduleNo='" + documentNo + "' ";
+            ExecuteNonQuery(query);
+        }
+
+        internal DataTable GetDatewiseDeliveryScheduleBySchNo(DateTime getreportDate, string getscheduleNo)
+        {
+            string query = @"Select T.*,ShortName,nullif(Amount,0) as Amount from ( Select  *,Rate*ScheduleQnty as Amount  from PR_DOWiseDeliverySchedule Where  ScheduleDate=GETDATE() And ScheduleQnty>0 AND ScheduleNo='" + getscheduleNo + "') as T Left outer Join(Select ProductCode, ShortName from PR_ProductInfo ) PR_ProductInfo ON   T.CountCode = PR_ProductInfo.ProductCode  Order By BuyerName";
+            return ExecuteQueryDT(query);
+        }
+
+        internal DataTable GetUnapprovedDelSchedule(string getUserName)
+        {
+            string query = "Select T.*,ScheduleDate,ScheduleQnty,ScheduleQnty / 50 PKT,ScheduleQnty / 1000 TON from(Select DocumentName, DocumentNo From LC_MarketingApprovalLog Where RequestTo= '" + getUserName + "'  And DocumentName = 'Del Schedule' And ApprovedBy IS NULL     ) as T left outer join(Select ScheduleDate, ScheduleNo, SUM(ScheduleQnty) as ScheduleQnty From PR_DOWiseDeliverySchedule group by ScheduleDate, ScheduleNo) PR_DOWiseDeliverySchedule ON T.DocumentNo = PR_DOWiseDeliverySchedule.ScheduleNo ";
+            return ExecuteQueryDT(query);
+        }
+
         internal void UpdateAltDoreqStatus(string companyName, string requestNo, string lcNo, string altReqStatus)
         {
             string query = "Update PR_AltDORequest Set ReqStatus='" + altReqStatus + "' Where CompanyName='" + companyName + "'   And AltReqNo='" + requestNo + "' And LCNo='" + lcNo + "'";

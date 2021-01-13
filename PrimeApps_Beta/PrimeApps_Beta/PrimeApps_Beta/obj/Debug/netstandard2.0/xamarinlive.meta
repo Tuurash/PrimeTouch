@@ -7,6 +7,11 @@
       <Properties />
     </XamlFileMeta>
     <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Manager\DelSch_Details_Popup.xaml</FilePath>
+      <Hash>D4-D8-A1-9A-D9-15-6E-63-25-26-F5-CD-D1-BB-25-D8</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
       <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Themes\LightTheme.xaml</FilePath>
       <Hash>39-35-CD-2A-EF-77-0E-81-35-6E-C6-96-B5-CA-BC-B6</Hash>
       <Properties />
@@ -37,7 +42,7 @@
     </XamlFileMeta>
     <XamlFileMeta>
       <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\Alt_DODetailsPopup.xaml</FilePath>
-      <Hash>49-2E-31-22-0B-2B-A2-33-10-7D-BA-ED-C6-86-0A-C8</Hash>
+      <Hash>3D-74-9D-C2-E1-1D-5F-59-0F-66-B9-FC-CE-54-6E-0B</Hash>
       <Properties />
     </XamlFileMeta>
     <XamlFileMeta>
@@ -58,6 +63,13 @@
       <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\BlankPage.xaml</FilePath>
       <Hash>A9-EE-DC-38-BA-39-E3-E9-50-00-73-65-C3-DF-FA-3A</Hash>
       <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\DelSch_ApprovalDashboard.xaml</FilePath>
+      <Hash>1F-13-20-58-5A-4C-6B-FA-F7-87-57-6E-49-44-3A-51</Hash>
+      <Properties>
+        <string>BackgroundColor</string>
+      </Properties>
     </XamlFileMeta>
     <XamlFileMeta>
       <FilePath>D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\Views\DOApprovalDashboard.xaml</FilePath>

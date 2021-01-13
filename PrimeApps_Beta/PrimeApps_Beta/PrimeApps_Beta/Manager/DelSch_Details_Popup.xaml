@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  xmlns:rg="http://rotorgames.com"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="PrimeApps_Beta.Manager.DelSch_Details_Popup">
+
+    <Grid HeightRequest="400" VerticalOptions="End">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.RowSpan="2" HeightRequest="700" VerticalOptions="End" CornerRadius="15" Padding="20,0" BackgroundColor="White">
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                <Label Text="" x:Name="lblDocumentNo" Margin="0,20,0,20" HorizontalOptions="Center" FontAttributes="Bold" FontSize="16" TextColor="Black"></Label>
+
+                <Grid Padding="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="2" Grid.Column="1" Text="Item " XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Grid.Row="2" Grid.Column="2" Text="Quantity " XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Grid.Row="2" Grid.Column="3" Text="Rate " XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Grid.Row="2" Grid.Column="4" Text="Amount " XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
+
+                </Grid>
+
+                <ListView x:Name="DelSch_DetailList"
+                          HasUnevenRows="True"
+                          Margin="0,100,0,0">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid Padding="5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="4"></RowDefinition>
+                                            <RowDefinition Height="20"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0"></ColumnDefinition>
+                                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{ Binding ShortName }" XAlign="Center" YAlign="Start" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Grid.Row="1" Grid.Column="2" Text="{ Binding ScheduleQnty,StringFormat='{0:N2}' }"  XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Grid.Row="1" Grid.Column="3" Text="{ Binding Rate,StringFormat='{0:N2}' }" XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Grid.Row="1" Grid.Column="4" Text="{ Binding Amount,StringFormat='{0:C2}' }" XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
+
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                    <ListView.Footer>
+                        <StackLayout Spacing="3">
+                            <Label Margin="0,20,0,20" x:Name="lblTotalAmount" HorizontalOptions="Center" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                            <Button Text="Approve" 
+                                    x:Name="btnApprove" 
+                                    Margin="0,0,0,20" 
+                                    VerticalOptions="End" 
+                                    CornerRadius="12" WidthRequest="30" 
+                                    HeightRequest="50" BackgroundColor="#9e2a2b" 
+                                    Clicked="btnApprove_Clicked"/>
+
+                        </StackLayout>
+                    </ListView.Footer>
+
+                </ListView>
+
+            </Grid>
+
+
+        </Frame>
+
+        <ActivityIndicator x:Name="indicatorApproveProgress" 
+                                   IsRunning="{Binding isBusy}" 
+                                   HeightRequest="100" WidthRequest="70" 
+                                   HorizontalOptions="Center" IsVisible="true" VerticalOptions="Center"                                   
+                                   Color="#d00000"/>
+
+    </Grid>
+
+</pages:PopupPage>

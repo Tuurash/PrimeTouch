@@ -40,7 +40,6 @@ namespace PrimeApps_Beta.Views
             DOType = getDoType;
             InvoiceNo = getInvoiceNo;
         }
-
         protected override void OnAppearing()
         {
             decimal TotalQnty, TotalAmount = 0;
@@ -126,10 +125,9 @@ namespace PrimeApps_Beta.Views
             //closing Popup
             ApprovalFinalizing(DocNo);
         }
-
         private void ApprovalFinalizing(string docNo)
         {
-            DependencyService.Get<INotification>().CreateNotification("primeApps", "DO: " + docNo + " has been sent to hierarchy for approval.");
+            DependencyService.Get<INotification>().CreateNotification("primeApps", "Alternate DO: " + docNo + " has been sent to hierarchy for approval.");
 
             ActivityIndicator activityIndicator = new ActivityIndicator { IsRunning = false };
             App.Current.MainPage.Navigation.PopPopupAsync(true);

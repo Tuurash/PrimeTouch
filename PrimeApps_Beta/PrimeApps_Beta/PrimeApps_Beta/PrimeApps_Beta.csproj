@@ -45,6 +45,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Update="Manager\DelSch_Details_Popup.xaml">
+		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
 		<EmbeddedResource Update="Themes\LightTheme.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</EmbeddedResource>
@@ -68,6 +71,9 @@
 		</EmbeddedResource>
 		<EmbeddedResource Update="Views\BlankPage.xaml">
 			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\DelSch_ApprovalDashboard.xaml">
+		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Views\DOApprovalDashboard.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

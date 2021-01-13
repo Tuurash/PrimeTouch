@@ -121,3 +121,5 @@ D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\obj\Debug\netstand
 D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\obj\Debug\netstandard2.0\Views\ADO_ReqDetailPopupPage.xaml.g.cs
 D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\obj\Debug\netstandard2.0\Views\Alt_DODetailsPopup.xaml.g.cs
 D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\obj\Debug\netstandard2.0\Views\Alt_DO_ApprovalDashboard.xaml.g.cs
+D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\obj\Debug\netstandard2.0\Manager\DelSch_Details_Popup.xaml.g.cs
+D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta\obj\Debug\netstandard2.0\Views\DelSch_ApprovalDashboard.xaml.g.cs
