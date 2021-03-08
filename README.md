@@ -1,5 +1,5 @@
 # PrimeTouch
 ## Xamarin ERP Companion
 
-![](https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/loginPage.jpg | width=100)
-<img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/loginPage.jpg" width="200" height="400"/>  <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ApprovalPanel.jpg" /><img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/AprovalDashboard.jpg" />
+#### Snaps
+<img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/loginPage.jpg" width="250" height="450"/>  <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ApprovalPanel.jpg" width="250" height="450"/><img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/AprovalDashboard.jpg" width="250" height="450"/>
