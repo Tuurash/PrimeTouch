@@ -1,8 +1,0 @@
-D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.iOS\obj\iPhoneSimulator\Release\ibtool\_BundleResourceWithLogicalName.items
-D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.iOS\obj\iPhoneSimulator\Release\actool\_PartialAppManifest.items
-D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.iOS\obj\iPhoneSimulator\Release\actool\_BundleResourceWithLogicalName.items
-D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.iOS\obj\iPhoneSimulator\Release\coremlc\_PartialAppManifest.items
-D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.iOS\obj\iPhoneSimulator\Release\coremlc\_BundleResourceWithLogicalName.items
-D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.iOS\obj\iPhoneSimulator\Release\optimized\
-D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.iOS\obj\iPhoneSimulator\Release\PrimeApps_Beta.iOS.csprojAssemblyReference.cache
-D:\DevOPS_Mobile\PrimeApps_Beta\PrimeApps_Beta\PrimeApps_Beta.iOS\obj\iPhoneSimulator\Release\PrimeApps_Beta.iOS.csproj.CoreCompileInputs.cache
