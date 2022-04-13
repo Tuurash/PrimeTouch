@@ -12,7 +12,6 @@
   <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/login.PNG"/> 
   <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ApprovalPanel.PNG" />
   <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ApprovalDashboard.PNG"/>
-
   <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/Flyout.PNG"/> 
   <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ActivityHistory.PNG"/> 
   <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/Profile.PNG"/>
