@@ -8,7 +8,10 @@
 - Auth0 OIDC
 
 #### Snaps
-
-  <img src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/login.PNG" width="640" height="480"/><img src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ApprovalPanel.PNG" width="640" height="480"/><img src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ApprovalDashboard.PNG" width="640" height="480"/>
-  <img src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/Flyout.PNG" width="640" height="480"/> <img src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ActivityHistory.PNG" width="640" height="480"/><img src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/Profile.PNG" width="640" height="480"/>
-
+<p align="center">
+  <img src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/login.PNG"/>
+</p>
+<h3 align="right">
+  <a href="https://github.com/Tuurash/PrimeTouch/tree/master/Snaps">other snaps..
+  </a>
+</h3>  
