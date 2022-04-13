@@ -9,7 +9,7 @@
 
 #### Snaps
 <p align="center"> 
-  <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/login.PNG" width="250" height="450"/> 
+  <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/login.PNG"/> 
   <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ApprovalPanel.PNG" width="250" height="450"/>
   <img align="center" src="https://github.com/Tuurash/PrimeTouch/blob/master/Snaps/ApprovalDashboard.PNG" width="250" height="450"/>
 </p>
