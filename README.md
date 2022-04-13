@@ -1,9 +1,8 @@
 <h2 align="center">PrimeTouch</h2>  
-<h5 align="center">
-   ERP Companion
-</h5>  
-#### Technology
-- Xamarin Forms C#
+<h5 align="center">ERP Companion</h5>  
+
+#### Technology  
+- Xamarin Forms C#  
 - linq
 - Sqlite-net pcl
 - Auth0 OIDC
